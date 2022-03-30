@@ -637,7 +637,7 @@ jupytext --set-formats ipynb, py, md --sync <notebook_path>
 [ln_sublime_dl]: https://www.sublimetext.com/
 [ln_Jupytext_home]: https://github.com/mwouts/jupytext
 [ln_zip_of_repo]: https://github.com/tgfisher/ouroboros/archive/refs/heads/main.zip 
-[ln_python_colab]: https://google.com
+[ln_python_colab]: https://colab.research.google.com/drive/1k4DY8BScPdxSYuqvYRX4qV27MFAtfKju?usp=sharing
 [ln_about_modules]: https://docs.python.org/3/tutorial/modules.html
 [ln_programmingmethods]: http://web.stanford.edu/class/cs106a/ 
 [ln_learnpythonthehardway]: https://learncodethehardway.org/python/
