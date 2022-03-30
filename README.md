@@ -63,7 +63,8 @@ _remember us when you are famous._ [:woman_technologist:][ln_linnie_twitter] [:m
 ## First Things First :bread: 'n :butter:
 
 - [ ] Setup [your bash terminal][ln_CNJCx_terminalsetup] by following along in the "Prerequisites section".
-- [ ] Find a text editor you like ([VS Code][ln_vscode_dl], [Atom][ln_atom_dl], and [Sublime][ln_sublime_dl] are good options)
+    - When you have time check out [CNJCx course][ln_CNJCX_home] for a deeper dive on many topics not covered in this tutorial: vim, tmux, ssh, Windows Subsystem for Linux, &c.
+- [ ] Choose a text editor you like ([VS Code][ln_vscode_dl], [Atom][ln_atom_dl], and [Sublime][ln_sublime_dl] are all good options)
 - [ ] \[**GitHub.com users**\] Clone this repository onto your local machine.
 - [ ] \[**Everyone else**\] Download this repository onto your local machine.
     - Select the green <kbd>code v</kbd> button where you can download [the zip][ln_zip_of_repo].
