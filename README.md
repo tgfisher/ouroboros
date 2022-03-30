@@ -108,7 +108,7 @@ The `which` command at the bash/zsh command line tells you what the computer wou
 you ran that command. If you want to know what `python` does you can run `which`.
 
 ```bash
-$ which python # this is a comment, bash ignores things after '#'
+which python # this is a comment, bash ignores things after '#'
 ```
 
 Additionally, the `-a` **flag**, flags are options on bash functions, will list all
@@ -117,7 +117,7 @@ for a command in various locations (in the order they appear in your `PATH` vari
 You can run `echo $PATH` to see your paths and their order.
 
 ```bash
-$ which -a python3 # check out which python3 you have lying around
+which -a python3 # check out which python3 you have lying around
 ``` 
 
 ### Step 2: Get Python
@@ -139,13 +139,13 @@ packages_.  Installing it is easy, you should have taken care of it in the
 [First Things First](#first-things-first-bread-n-butter) section:
 
 ```bash
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # dont copy the $
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Getting the newest stable version of python is an easy one-liner with `brew`
 
 ```bash
-$ brew install python3 # if you get an "already installed error" try `brew upgrade python@3.9`
+brew install python3 # if you get an "already installed error" try `brew upgrade python@3.9`
 ```
 
 Q: Where did it install? 
@@ -154,7 +154,7 @@ A: We can check using `brew --prefix`. This commands returns the default
 install path for brew.
 
 ```bash
-$ brew --prefix # this command-flag-pair tells you where `brew` puts things
+brew --prefix # this command-flag-pair tells you where `brew` puts things
 /usr/local
 ```
 
@@ -170,13 +170,13 @@ can use to bring our new python to the front of the line. This trick is the
 `alias` command in bash.
 
 ```bash
-$ alias brewedpython='/usr/local/bin/python3'
+alias brewedpython='/usr/local/bin/python3'
 ```
 
 Now try `which`
 
 ```bash
-$ which brewedpython
+which brewedpython
 ```
 
 #### Ubuntu (and Windows Subsystem for Linux)<a name="first-lesson-ubuntu"></a>
@@ -185,16 +185,16 @@ We don't need an external package manger for Ubuntu because it isn't missing (li
 it is on macOS).
 
 ```bash
-$ sudo add-apt-repository ppa:deadsnakes/ppa
-$ sudo apt-get update
-$ sudo apt-get install python3.9
-$ sudo apt-get install python3.9-venv
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.9
+sudo apt-get install python3.9-venv
 ```
 
 Now try `which`
 
 ```
-$ which -a python3.9
+which -a python3.9
 ```
 ## Python Lesson 2: Virtual Environments :disguised_face:
 
@@ -223,15 +223,15 @@ Using the module flag `-m` with `venv` looks like this: `python<version> -m
 venv </path/to/your/new/env>`._
 
 ```bash
-$ python3.9 -m venv ~/we_sick_venv
+python3.9 -m venv ~/we_sick_venv
     --- OR if you made an alias above ---
-$ brewedpython -m venv ~/we_sick_venv
+brewedpython -m venv ~/we_sick_venv
 ```
 
 Wow, you just made a virtual environment! :eyes:
 
 ```bash
-$ source ~/we_sick/bin/activate
+source ~/we_sick/bin/activate
 (we_sick) $ # the prompt changes to tell you what venv you are in
 ```
 
@@ -261,8 +261,8 @@ jupyter and begin to `code`!!
 running the commands below.
 
 ```bash
-$ cd /path/to/ouroboros
-$ ls # you should see something like what is listed below
+cd /path/to/ouroboros
+ls # you should see something like what is listed below
 README.md    bin    notebooks    ouroboros    setup.py
 ```
 
@@ -293,8 +293,8 @@ have all of your virtual environments ready for you? **YES!!**
 
 ```bash
 (we_sick) $ deactivate
-$ which python3 # you aren't in your workshop anymore (we want that)
-$ python3 -m pip install jupyter # note this is putting jupyter randomly in your "home" python
+which python3 # you aren't in your workshop anymore (we want that)
+python3 -m pip install jupyter # note this is putting jupyter randomly in your "home" python
 ```
 
 If you run `jupyter notebook` now, you will be using the "home", or **base**,
@@ -303,7 +303,7 @@ environment. We are going to teach you _a trick_ that is convenient if you have
 many virtual environments and use jupyter notebooks for development.
 
 ```bash
-$ jupyter notebook
+jupyter notebook
        #===  as always a ton of stuff will pop up here ===#
 ```
 
@@ -313,10 +313,10 @@ make them super convenient. We will be able to get to all of them without even
 having to activate them.
 
 ```bash
-$ source we_sick/bin/activate
+source we_sick/bin/activate
 (we_sick) $ python -m ipykernel install --name=we_sick --display-name="Python (we_sick)"
 (we_sick) $ deactivate
-$ jupyter notebook
+jupyter notebook
        #===  don't panic, a ton of stuff will pop up here ===#
 ```
 
@@ -429,8 +429,8 @@ First, move to a location in your directory structure where you would like your 
 repositories to live. 
 
 ```bash
-$ mkdir ~/local_repos # make a new directory off of home (~)
-$ cd $_ # '$_' is a little trick that holds the last input '~/local_repos' for you
+mkdir ~/local_repos # make a new directory off of home (~)
+cd $_ # '$_' is a little trick that holds the last input '~/local_repos' for you
 ```
 
 Next, verify your directory position with `pwd`. Make sure you are where you want
@@ -439,7 +439,7 @@ contents into your current directory. A new folder will be made with the name
 \<your_new_repo\> when you clone._
 
 ```bash
-$ pwd # this command lets you know where you are in your directory structure
+pwd # this command lets you know where you are in your directory structure
 /path/to/local_repos
 ```
 
@@ -448,7 +448,7 @@ copy the cloning link look for a green <kbd>code v</kbd> button towards the top
 of every repo page._
 
 ```bash
-$ git clone https://github.com/<user>/<your_new_repo>.git
+git clone https://github.com/<user>/<your_new_repo>.git
 ```
 
 Next, 'clone' the code from this repository onto your machine. You will need this code
@@ -469,7 +469,7 @@ untouched.  This is powerful because you can always go back to the main branch
 from the feature development branch. 
 
 ```
-$ git checkout -b <branch_name>
+git checkout -b <branch_name>
 ```
 
 **Making a commit**
@@ -480,12 +480,12 @@ you should make a commit every time you make a small describable change.
 **Moving between branches**
 
 ```
-$ git branch # remind yourself of the branches available
+git branch # remind yourself of the branches available
   example_branch_of_interest
   main
 * some_random_feature
 
-$ git checkout example_branch_of_interest
+git checkout example_branch_of_interest
 ```
 
 **Merging a branch**
@@ -495,8 +495,8 @@ you are currently sitting. Most commonly you will merge a branch that holds
 a new feature into your main branch. 
 
 ```
-$ git checkout main # go to the branch you'd like to merge into
-$ git merge some_random_feature
+git checkout main # go to the branch you'd like to merge into
+git merge some_random_feature
 ```
 
 **Learn more on your own**
@@ -533,7 +533,7 @@ fill in the `setup.py` file with the content that matches your code structure.
 ### BONUS STUFF
 
 ```bash
-$ printenv # we used an enviromental variable `PATH` above, run this to see 
+printenv # we used an enviromental variable `PATH` above, run this to see 
            # _all_ your enviromental variables. Feel free to ask us if you 
            # want to understand what these are.
 ```
@@ -600,8 +600,8 @@ your virtual environment. This being said, you are welcome to keep it within a
 virtual environment.
 
 ```bash
-$ python3 -m pip install jupytext # to put it into your base python3
-$ source we_sic/bin/activate
+python3 -m pip install jupytext # to put it into your base python3
+source we_sic/bin/activate
 (we_sick) $ pip install jupytext # to add to a specific venv
 ```
 
@@ -615,7 +615,7 @@ This command is going to track your notebook, stored at <notebook_path>, as a
 regular ipynb, a readable markdown (.md) file, and a runnable python (.py) file, wow!
 
 ```bash
-$ jupytext --set-formats ipynb, py, md --sync <notebook_path>
+jupytext --set-formats ipynb, py, md --sync <notebook_path>
 ```
 
 
