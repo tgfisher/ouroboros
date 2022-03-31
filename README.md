@@ -4,6 +4,8 @@ Learn to write code, store code, and share code.
 
 Have fun and ask someone before beating your head against a wall.
 
+This is a living document. Check back in occasionally to see updates.
+
 ### Table Of Contents
 1. [An Introduction to Python](#an-introduction-to-python-nerd_face)
     - [Python Installation](#python-lesson-1-python-installation-cowboy_hat_face)
