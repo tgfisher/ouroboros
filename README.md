@@ -337,11 +337,55 @@ title="Using the 'New button' shows a the 'Python (we_sick)' kernel available."
 
 ### Python Lesson 4: Anatomy of a Package
 
-:construction: TODO :construction:
+#### Anatomy of a python package
 
-What makes a python package
+```bash
+your_package_name # This is the root of your project (the name of the repo) and is most often <your_package_name>.
+ │
+ ├── README.md # This .md ('markdown' file) is an ideal place to put information about your
+ │             # repository: what it does, how to install it, &c. As a bonus GitHub.com
+ │             # automatically shows these contents on the repo's landing page.
+ │
+ ├── bin # Not required, this is a good place to put scripts 'scripts' is and equally good directory name.
+ │   │
+ │   └── a_sript.py # scripts are useful standalone chunks of code (e.g. a preprocessing script).
+ │                  # A mature jupyter notebook could be a good script candidate. Google
+ │                  # sys.argv if you would like to add 'inputs' to a script.
+ │
+ ├── notebooks/ # Not required, this is where you can store notebooks. 
+ │   │
+ │   └── a_notebook.ipynb # Notebooks are block style asynchronous scripts. They are a great for
+ │                        # developing your package and performing analysis with visualizations.
+ │                        # They can also be very powerful as living documentation, and can provide
+ │                        # provide explicit usecase examples for package features.
+ │
+ ├── your_package_name/ # This top-level directory (the package) commonly has the same name as the repo root.
+ │   │
+ │   ├── __init__.py # This file is often empty, but it can control import flow of modules
+ │   │               # and sub-packages under it in the directory structure. Note: that in the
+ │   │               # most recent python versions packages don't 'require' the empty __init__.py.
+ │   │
+ │   ├── a_module.py # Modules are where reusable code chunks are stored: functions, classes,
+ │   │               # variables. Modules can also contain scripts under `if __name__ == "__main__:"`
+ │   │               # __name__ will be "__main__" when the module is run as a script:
+ │   │               # `python a_module.py` <-- from the command line.
+ │   │
+ │   └── a_subpackage/ # A subpackage helps to further specify your package namespace.
+ │       │
+ │       ├── __init__.py # Again, it is common for a package to have this, even if it is empty.
+ │       │
+ │       └── a_module.py # We've used the same module name as above but, critically,
+ │                       # it has a different import path. This means the two names will
+ │                       # not collide: `your_package_name.a_module` versus
+ │                       # `your_package_name.a_subpackage.a_module`.
+ │
+ └── setup.py # This file is critical for making your package `pip install`-able 
+              # Note: there isn't 'one way' to do it. The setup file included in this
+              # repository is an example of a fairly simple, but decently featured
+              # setup file. The setup.py file example should be more than enough for
+              # most situations.
+```
 
-:construction: TODO :construction:
 
 ---
 ---
