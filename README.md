@@ -12,6 +12,7 @@ This is a living document. Check back in occasionally to see updates.
     - [Virtual Environments](#python-lesson-2-virtual-environments-disguised_face)
     - [Python Basics \& Jupyter](#python-lesson-3-python-basics--jupyter-astronaut)
     - [Anatomy of a Package](#python-lesson-4-anatomy-of-a-package)
+    - [Installing a Local Package](#python-lesson-5-installing-a-local-package)
 1. [Version Control: Git \& GitHub.com](#version-control-git--githubcom-octocat)
     - [Analogy to "tracking changes"](#git-lesson-1-version-control-a-tracking-changes-analogy-bowtie)
     - [Getting Git](#git-lesson-2-git-setup-and-first-steps-hugs)
@@ -386,6 +387,34 @@ your_package_name # This is the root of your project (the name of the repo) and 
               # most situations.
 ```
 
+### Python Lesson 5: Installing a Local Package
+
+#### Local Package Install Command
+
+```bash
+pip install -e . # if you are in the project directory
+    --- OR ---
+pip install -e <path/to/your/package/root> # if you aren't currently in the project direcory.
+```
+#### Contextualizing the Local `pip install`
+
+This repository is setup as a package. It has all the necessary components to
+be simply 'pip install'-ed into a virtual environment. The difference between
+installing a package like "numpy" and installing your local package is quite small:
+
+1) You will make changes to your package during development. Unlike the packages
+you might download from the [Python Package Index (PyPI)][ln_pypi] (e.g. numpy,
+matplotlib, jupyter), your local code will constantly evolve as you move 
+forward in your project. Adding the `-e` for "editable" sets up the install
+to check your package source code for updates whenever the package is used.
+
+2) Another difference is where you point pip to install. Looking into the
+documentation with `pip install --help` shows a few ways, we will highlight the
+two most common. The primary way is to use a "requirement specifier" for
+packages on PyPI like `pip install <requirement specifier>` i.e. `pip install
+numpy`. The other way, useful for local packages, takes your "local project path".
+The "local project path" is the path to the root of your package, where the
+`setup.py` file is located.
 
 ---
 ---
@@ -689,3 +718,4 @@ jupytext --set-formats ipynb, py, md --sync <notebook_path>
 [ln_programmingmethods]: http://web.stanford.edu/class/cs106a/ 
 [ln_learnpythonthehardway]: https://learncodethehardway.org/python/
 [ln_hw_github]: https://docs.github.com/en/get-started/quickstart/hello-world
+[ln_pypi]: https://pypi.org/
