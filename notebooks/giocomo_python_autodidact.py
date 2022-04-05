@@ -8,9 +8,9 @@
 #       format_version: '1.5'
 #       jupytext_version: 1.13.7
 #   kernelspec:
-#     display_name: Python (we_sick)
+#     display_name: Python 3 (ipykernel)
 #     language: python
-#     name: we_sick
+#     name: python3
 # ---
 
 # # IPython Extensions
@@ -276,8 +276,8 @@ def all_integers_match(*integers):
 
 def memory_locations_of_list_elements(*args):
     for stuff in zip(*args):
-        ids = (id(value) for value in stuff)
-        print(*ids, "<--", all_integers_match(ids))
+        ids = tuple(id(value) for value in stuff)
+        print(*ids, "<--", all_integers_match(*ids))
 
 
 # -
@@ -380,7 +380,6 @@ def custom_functions_can_have_help(an_input, keyword_argument="Your input was: "
     assert isinstance(an_input, int), "Your input must be an integer."
     
     return keyword_argument + str(an_input)
-
 
 
 help(custom_functions_can_have_help)
@@ -524,6 +523,3 @@ def fix_me(path, keyword_argument = "I want to be free"):
 
 # this is just an evaluation block, change the function definition above
 fix_me(valid_path)
-
-
-
