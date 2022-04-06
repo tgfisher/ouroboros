@@ -235,8 +235,8 @@ brewedpython -m venv ~/we_sick_venv
 Wow, you just made a virtual environment! :eyes:
 
 ```bash
-source ~/we_sick/bin/activate
-(we_sick) $ # the prompt changes to tell you what venv you are in
+source ~/we_sick_venv/bin/activate
+(we_sick_venv) $ # the prompt changes to tell you what venv you are in
 ```
 
 #### Stocking your Virtual Environment with Packages (Tools)
@@ -244,11 +244,11 @@ source ~/we_sick/bin/activate
 `pip` (**p**ip **i**nstalls **p**ackages)
 
 ```bash
-(we_sick) $ pip list # shows you what you have installed
-(we_sick) $ pip install numpy # numpy is #1, it is the most important package
-(we_sick) $ pip install matplotlib # this is a plotting library
-(we_sick) $ pip install jupyter # ppl with matlab experience might appreciate this tool
-(we_sick) $ pip install ipykernel # we need this to do a cool jupyter trick later
+(we_sick_venv) $ pip list # shows you what you have installed
+(we_sick_venv) $ pip install numpy # numpy is #1, it is the most important package
+(we_sick_venv) $ pip install matplotlib # this is a plotting library
+(we_sick_venv) $ pip install jupyter # ppl with matlab experience might appreciate this tool
+(we_sick_venv) $ pip install ipykernel # we need this to do a cool jupyter trick later
 ```
 
 ## Python Lesson 3: Python Basics \& Jupyter :astronaut:
@@ -274,11 +274,11 @@ Once you know that you are in the right place we can fire up jupyter. There are
 a few ways to do this. If you are a first-timer just run the classic `jupyter notebook`.
 
 ```bash
-(we_sick) $ jupyter notebook
+(we_sick_venv) $ jupyter notebook
     --  OR  --
-(we_sick) $ jupyter notebook --no-browser # if you dont want a browser
+(we_sick_venv) $ jupyter notebook --no-browser # if you dont want a browser
     --  OR  --
-(we_sick) $ jupyter notebook --port=4343 # if you don't want to use the default 8888
+(we_sick_venv) $ jupyter notebook --port=4343 # if you don't want to use the default 8888
        #===  don't panic, a ton of stuff will pop up here ===#
 ```
 
@@ -296,7 +296,7 @@ environment and then start jupyter. Is there a way to just start jupyter and
 have all of your virtual environments ready for you? **YES!!**
 
 ```bash
-(we_sick) $ deactivate
+(we_sick_venv) $ deactivate
 which python3 # you aren't in your workshop anymore (we want that)
 python3 -m pip install jupyter # note this is putting jupyter randomly in your "home" python
 ```
@@ -317,9 +317,9 @@ make them super convenient. We will be able to get to all of them without even
 having to activate them.
 
 ```bash
-source we_sick/bin/activate
-(we_sick) $ python -m ipykernel install --name=we_sick --display-name="Python (we_sick)"
-(we_sick) $ deactivate
+source we_sick_venv/bin/activate
+(we_sick_venv) $ python -m ipykernel install --name=we_sick_venv --display-name="Python (we_sick_venv)"
+(we_sick_venv) $ deactivate
 jupyter notebook
        #===  don't panic, a ton of stuff will pop up here ===#
 ```
@@ -331,7 +331,7 @@ kernels, it will be there too.
 <img
 src="https://user-images.githubusercontent.com/26031420/145482739-bf25925c-0555-4075-89db-7797b7331d1b.png" 
 width="40%"
-title="Using the 'New button' shows a the 'Python (we_sick)' kernel available."
+title="Using the 'New button' shows a the 'Python (we_sick_venv)' kernel available."
 />
 </div>
 
@@ -677,8 +677,8 @@ virtual environment.
 
 ```bash
 python3 -m pip install jupytext # to put it into your base python3
-source we_sic/bin/activate
-(we_sick) $ pip install jupytext # to add to a specific venv
+source we_sick_venv/bin/activate
+(we_sick_venv) $ pip install jupytext # to add to a specific venv
 ```
 
 #### Tracking a notebook for the first time
