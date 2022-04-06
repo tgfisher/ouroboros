@@ -677,7 +677,7 @@ virtual environment.
 
 ```bash
 python3 -m pip install jupytext # to put it into your base python3
-source we_sic/bin/activate
+source we_sick_venv/bin/activate
 (we_sick_venv) $ pip install jupytext # to add to a specific venv
 ```
 
