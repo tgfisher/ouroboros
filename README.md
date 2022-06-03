@@ -6,6 +6,8 @@ Have fun and ask someone before beating your head against a wall.
 
 This is a living document. Check back in occasionally to see updates.
 
+The heart of this document for new python users are the `notebooks`, specifically [the interactive tutorial][ln_interactivetutorial].
+
 ### Table Of Contents
 1. [An Introduction to Python](#an-introduction-to-python-nerd_face)
     - [Python Installation](#python-lesson-1-python-installation-cowboy_hat_face)
@@ -694,7 +696,7 @@ regular ipynb, a readable markdown (.md) file, and a runnable python (.py) file,
 jupytext --set-formats ipynb, py, md --sync <notebook_path>
 ```
 
-
+[ln_interactivetutorial]:https://github.com/tgfisher/ouroboros/blob/main/notebooks/giocomo_python_interactive_reference.ipynb
 [ln_CNJCx_terminalsetup]:https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week1_commandline/cnjcx_week1_recap.md#bash-setup
 [ln_CNJCx_commandlinetools]:https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week1_commandline/cnjcx_week1_recap.md#finally-lets-get-git
 [ln_CNJCx_introgit]: https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week3_python/cnjcx_week3_recap.md#introducing-yourself-to-git
