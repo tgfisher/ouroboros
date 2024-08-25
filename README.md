@@ -70,7 +70,7 @@ _remember us when you are famous._ [:woman_technologist:][ln_linnie_twitter] [:m
 
 - [ ] Setup [your bash terminal][ln_CNJCx_terminalsetup] by following along in the "Prerequisites section".
     - When you have time check out [CNJCx course][ln_CNJCX_home] for a deeper dive on many topics not covered in this tutorial: vim, tmux, ssh, Windows Subsystem for Linux, &c.
-- [ ] Choose a text editor you like ([VS Code][ln_vscode_dl], [Atom][ln_atom_dl], and [Sublime][ln_sublime_dl] are all good options)
+- [ ] Choose a text editor you like ([VS Code][ln_vscode_dl], [Zed (macOS)][ln_zed_dl], and [Sublime][ln_sublime_dl] are all good options)
 - [ ] \[**GitHub.com users**\] Clone this repository onto your local machine.
 - [ ] \[**Everyone else**\] Download this repository onto your local machine.
     - Select the green <kbd>code v</kbd> button where you can download [the zip][ln_zip_of_repo].
@@ -715,7 +715,7 @@ jupytext --set-formats ipynb, py, md --sync <notebook_path>
 [ln_linnie_twitter]: https://twitter.com/linniejiang
 [ln_about_git]: https://git-scm.com/about
 [ln_vscode_dl]: https://code.visualstudio.com/download
-[ln_atom_dl]: https://atom.io/
+[ln_zed_dl]: https://zed.dev/
 [ln_sublime_dl]: https://www.sublimetext.com/
 [ln_Jupytext_home]: https://github.com/mwouts/jupytext
 [ln_zip_of_repo]: https://github.com/tgfisher/ouroboros/archive/refs/heads/main.zip 
