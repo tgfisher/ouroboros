@@ -384,10 +384,10 @@ your_package_name # This is the root of your project (the name of the repo) and 
  │                       # `your_package_name.a_subpackage.a_module`.
  │
  └── pyproject.yaml # This file is critical for making your package `pip install`-able 
-              # Note: there isn't 'one way' to do it. The pyproject file included in this
-              # repository is an example of a fairly simple, but decently featured
-              # pyproject file. The pyproject.yaml file example should be more than enough for
-              # most situations.
+                    # Note: there isn't 'one way' to do it. The pyproject file included in this
+                    # repository is an example of a fairly simple, but decently featured
+                    # pyproject file. The pyproject.yaml file example should be more than enough for
+                    # most situations.
 ```
 
 ### Python Lesson 5: Installing a Local Package
