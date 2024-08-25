@@ -270,7 +270,7 @@ running the commands below.
 ```bash
 cd /path/to/ouroboros
 ls # you should see something like what is listed below
-README.md    bin    notebooks    ouroboros    setup.py
+README.md    bin    notebooks    ouroboros    pyproject.yaml
 ```
 
 Once you know that you are in the right place we can fire up jupyter. There are
@@ -383,10 +383,10 @@ your_package_name # This is the root of your project (the name of the repo) and 
  │                       # not collide: `your_package_name.a_module` versus
  │                       # `your_package_name.a_subpackage.a_module`.
  │
- └── setup.py # This file is critical for making your package `pip install`-able 
-              # Note: there isn't 'one way' to do it. The setup file included in this
+ └── pyproject.yaml # This file is critical for making your package `pip install`-able 
+              # Note: there isn't 'one way' to do it. The pyproject file included in this
               # repository is an example of a fairly simple, but decently featured
-              # setup file. The setup.py file example should be more than enough for
+              # pyproject file. The pyproject.yaml file example should be more than enough for
               # most situations.
 ```
 
@@ -417,7 +417,7 @@ two most common. The primary way is to use a "requirement specifier" for
 packages on PyPI like `pip install <requirement specifier>` i.e. `pip install
 numpy`. The other way, useful for local packages, takes your "local project path".
 The "local project path" is the path to the root of your package, where the
-`setup.py` file is located.
+`pyproject.yaml` file is located.
 
 ---
 ---
@@ -604,7 +604,7 @@ use to establish _package_ structure for your project.
 Getting started is as easy as hitting the ["Use this
 template"](https://github.com/tgfisher/ouroboros/generate) button. Clone this
 repository and clear out our code and replace it with yours: don't forget to
-fill in the `setup.py` file with the content that matches your code structure.
+fill in the `pyproject.yaml` file with the content that matches your code structure.
 
 ---
 ---
