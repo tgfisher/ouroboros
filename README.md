@@ -31,20 +31,21 @@ tools are (for the most part) a means to a scientifically relevant end.
 This README.md will guide you through python3-based scientific computing
 concepts. If it is your first time going through it, take your time, trust the
 process, and go in order. Along the way you will learn `python3` coding basics
-such as syntax and common packages like `numpy`, but our real focus is on the
-supporting fundamentals which are often learned piecemeal or too late. These
+such as syntax and common packages like `numpy`, but our real focus is on to show 
+the supporting fundamentals which are often learned piecemeal or too late. These
 fundamentals can be hard to learn because they aren't as googleable
 as code snippets or packages of tools. If you are a bit fuzzy on the basics (e.g.
 environments, imports, versions, &c.) or you are new to scientific
-computing with `python3` this content should put you on track to improve your skills.
+computing with `python3` this content should put you on track to improve your skills
+and empower you to more easily improve your own skills.
 
 It is important to mention that this content aims to 'teach a person to fish',
-rather than 'give a person a fish'. Not every concept will receive an
-explicit didactic breakdown. The sprinkling of more advanced tricks and syntax aren't
-intended to confuse the reader, these are intended to expose the reader and
-encourage them to dive a bit deeper. If you would like to learn more about any
-of the concepts we raise there are so many GREAT resources such as
-[RealPython.com][ln_RealPython_home], ['Learn Python the Hard
+rather than 'give a person a fish'. Not every concept will receive an explicit
+didactic breakdown. **Advanced tricks and syntax will be sprinkled throughout
+this tutorial. These should be seen as opportunities for growth and serve to
+expose the reader and encourage them to dive a bit deeper.**  If you would like
+to learn more about any of the concepts we raise there are so many GREAT
+resources such as [RealPython.com][ln_RealPython_home], ['Learn Python the Hard
 Way'][ln_learnpythonthehardway], and [CS106A][ln_programmingmethods].
 
 Additionally, the format of this _repository_ is a bonus; it stands as an

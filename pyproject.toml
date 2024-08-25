@@ -1,0 +1,45 @@
+##                               ##
+#       simple package spec.      #
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ouroboros"
+version = "0.0.1"
+description = "This package is a 'template' and shows you what a package contains."
+authors = [{name="Grace"}, {name="Gabe"}, {name="Tucker"}]
+
+dependencies = ["numpy", "matplotlib"]
+requires-python = ">=3.10"
+
+[project.urls]
+Repository = "https://github.com/tgfisher/ouroboros.git"
+
+[project.optional-dependencies]
+dev = ["pre-commit", "ruff", "jupytext"]
+
+##                                           ##
+#       examples configuring other tools      #
+
+# no setup tools configuration required. We rely on 'automatic discovery'. This
+#  project uses the "src-layout" 
+# [tool.setuptools]
+# package-dir = {"" = "src"}
+
+#[tool.ruff]
+#line-length = 88
+#
+#[tool.ruff.lint]
+#extend-select = ["E501"]
+#
+#[tool.pyright]
+#include = ["src"]
+
+##                                                                          ##
+#                                 learn more                                 #
+
+# setuptools -- https://setuptools.pypa.io/en/latest/userguide/quickstart.html
+# pip build system -- https://pip.pypa.io/en/stable/reference/build-system/
+# "src-layout" -- https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#src-layout
