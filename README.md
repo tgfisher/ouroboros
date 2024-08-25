@@ -101,7 +101,7 @@ The trick to installing python ["correctly"](#what-does-right-or-correct-mean)
 is _understanding what you are doing, and knowing where python goes after
 installation_. This might sound silly, but with so many Stack Overflow entries
 and blogs, you might have python... but not really understand how you got it.
-this might come back to bite you because there are a ton of different versions
+This might come back to bite you because there are a ton of different versions
 and "types" of python and they can share names (e.g. `python`, `python3`,
 `python3.9`, `pythonw`).
 
@@ -467,7 +467,6 @@ procedure called 'merging' to fold it into the main code.
 In common word processing software (Google Docks, Microsoft Word, and
 LibreOffice) 'tracking changes' provides a non-destructive tool to record the
 who, when, and why of each change. The word processor tracks every keystroke
-
 and groups the changes by their spatial continuity in the document. In code,
 changes are perhaps--in my view--best organized by functional impact. Binding
 individual changes together is left up to the user. You must commit edited code
