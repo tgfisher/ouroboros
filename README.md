@@ -101,15 +101,16 @@ The trick to installing python ["correctly"](#what-does-right-or-correct-mean)
 is _understanding what you are doing, and knowing where python goes after
 installation_. This might sound silly, but with so many Stack Overflow entries
 and blogs, you might have python... but not really understand how you got it.
-This might come back to bite you because there are a ton of different versions
-and "types" of python and they can share names (e.g. python, python3,
-python3.9, pythonw).
+this might come back to bite you because there are a ton of different versions
+and "types" of python and they can share names (e.g. `python`, `python3`,
+`python3.9`, `pythonw`).
 
 ### Step 1: Get Oriented
 
 If you are on macOS or Ubuntu, WSL included, your OS relies on python for some scripts.
 _Likely_ you have python2.7. Most Ubuntu and macOS installs should come with
-a "python" that is version 2.7.
+a "python" that is version 2.7. _This might not be true anymore, your system likely
+ships with `python3` now!_
 
 The `which` command at the bash/zsh command line tells you what the computer would do if
 you ran that command. If you want to know what `python` does you can run `which`.
@@ -189,7 +190,8 @@ which brewedpython
 #### Ubuntu (and Windows Subsystem for Linux)<a name="first-lesson-ubuntu"></a>
 
 We don't need an external package manger for Ubuntu because it isn't missing (like
-it is on macOS).
+it is on macOS). _This will depend on your Ubuntu release. Possible that `deadsnakes` isn't 
+necessary. TODO: recommend install from python directly?_
 
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -363,25 +365,27 @@ your_package_name # This is the root of your project (the name of the repo) and 
  │                        # They can also be very powerful as living documentation, and can provide
  │                        # provide explicit usecase examples for package features.
  │
- ├── your_package_name/ # This top-level directory (the package) commonly has the same name as the repo root.
+ ├── src
  │   │
- │   ├── __init__.py # This file is often empty, but it can control import flow of modules
- │   │               # and sub-packages under it in the directory structure. Note: that in the
- │   │               # most recent python versions packages don't 'require' the empty __init__.py.
- │   │
- │   ├── a_module.py # Modules are where reusable code chunks are stored: functions, classes,
- │   │               # variables. Modules can also contain scripts under `if __name__ == "__main__:"`
- │   │               # __name__ will be "__main__" when the module is run as a script:
- │   │               # `python a_module.py` <-- from the command line.
- │   │
- │   └── a_subpackage/ # A subpackage helps to further specify your package namespace.
+ │   └── your_package_name/ # This top-level directory (the package) commonly has the same name as the repo root.
  │       │
- │       ├── __init__.py # Again, it is common for a package to have this, even if it is empty.
+ │       ├── __init__.py # This file is often empty, but it can control import flow of modules
+ │       │               # and sub-packages under it in the directory structure. Note: that in the
+ │       │               # most recent python versions packages don't 'require' the empty __init__.py.
  │       │
- │       └── a_module.py # We've used the same module name as above but, critically,
- │                       # it has a different import path. This means the two names will
- │                       # not collide: `your_package_name.a_module` versus
- │                       # `your_package_name.a_subpackage.a_module`.
+ │       ├── a_module.py # Modules are where reusable code chunks are stored: functions, classes,
+ │       │               # variables. Modules can also contain scripts under `if __name__ == "__main__:"`
+ │       │               # __name__ will be "__main__" when the module is run as a script:
+ │       │               # `python a_module.py` <-- from the command line.
+ │       │
+ │       └── a_subpackage/ # A subpackage helps to further specify your package namespace.
+ │           │
+ │           ├── __init__.py # Again, it is common for a package to have this, even if it is empty.
+ │           │
+ │           └── a_module.py # We've used the same module name as above but, critically,
+ │                           # it has a different import path. This means the two names will
+ │                           # not collide: `your_package_name.a_module` versus
+ │                           # `your_package_name.a_subpackage.a_module`.
  │
  └── pyproject.yaml # This file is critical for making your package `pip install`-able 
                     # Note: there isn't 'one way' to do it. The pyproject file included in this
@@ -619,7 +623,7 @@ printenv # we used an enviromental variable `PATH` above, run this to see
 #### What Does 'Right' or 'Correct' Mean?
 
 Ultimately, the 'right' or 'correct' way is the way that works well for
-**you**. Additionally, doing something the 'right' way from the start of your life
+**you**. Doing something the 'right' way from the start of your life
 as a pythonista will support a deeper understanding and establish habits that
 promote better control over the code you write and the development
 environments you create.
