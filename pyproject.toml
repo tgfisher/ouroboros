@@ -12,7 +12,7 @@ description = "This package is a 'template' and shows you what a package contain
 authors = [{name="Grace"}, {name="Gabe"}, {name="Tucker"}]
 
 dependencies = ["numpy", "matplotlib"]
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 
 [project.urls]
 Repository = "https://github.com/tgfisher/ouroboros.git"
